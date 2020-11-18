@@ -4,12 +4,17 @@
 			<h2>POINT VISION</h2>
 		</view>
 		<view class="cont-about-me">
-			<view class="about-me-title">About me</view>
-			<view class="about-me-center">个人简历</view>
-			<view class="about-me-cont">
-				<text>{{personalInformation.school}}</text>
-				<text>{{personalInformation.schoolHours}}</text>
-				<text>{{personalInformation.college}}</text>
+			<view class="about-me-left">
+				<view class="about-me-title">About me</view>
+				<view class="about-me-center">个人简历</view>
+				<view class="about-me-cont">
+					<text>{{personalInformation.school}}</text>
+					<text>{{personalInformation.schoolHours}}</text>
+					<text>{{personalInformation.college}}</text>
+				</view>
+			</view>
+			<view class="about-me-right">
+				<image class="about-me-right-img" src="../../static/images/chenyue.jpg"></image>
 			</view>
 		</view>
 		<view v-for="(i,key) in data" :key="key" class="cont-items" @click="onClick($event, key)">
@@ -35,8 +40,8 @@
 			};
 		},
 		methods: {
-			onClick: (e,key) => {
-				console.log(e,key, 90)
+			onClick: (e, key) => {
+				console.log(e, key, 90)
 			},
 		}
 	}
@@ -54,19 +59,32 @@
 	}
 
 	.cont-about-me {
-		background-color: #fff;
+		background-image: linear-gradient(#ba45ff, #6a38cb);
 		color: #f2eaff;
 		border-radius: 5px;
-		padding: 15px;
 		margin-bottom: 10px;
 		height: 107px;
 		display: flex;
-		flex-flow: column;
-		justify-content: center;
-		background-image: linear-gradient(#ba45ff, #6a38cb);
-		font-size: 12px;
+		justify-content: space-between;
 	}
 
+	.about-me-left {
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		font-size: 12px;
+		padding: 15px;
+	}
+
+	.about-me-right {
+		height: 100%;
+		width: 80px;
+	}
+	.about-me-right-img{
+		width: 100%;
+		height: 100%;
+		border-radius: 0 0 0 100px;
+	}
 	.about-me-center {
 		margin-top: 28px;
 	}

@@ -48,5 +48,15 @@
         "setting" : {
             "urlCheck" : true
         }
+    },
+    "h5" : {
+        "title" : "uniapp-demo",
+        "domain" : "139.196.223.176",
+        "devServer" : {
+            "https" : true
+        },
+        "router" : {
+            "base" : ""
+        }
     }
 }
